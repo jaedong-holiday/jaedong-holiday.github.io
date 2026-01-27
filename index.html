@@ -47,13 +47,8 @@
       border-bottom: 1px solid var(--border);
     }   
 
-    .section.intro {
-      background: transparent;
-      border: none;
-      padding: 0 0 36px 0;
-    }
-    .section.intro h1 {
-      margin-top: 0;
+    .header > div:last-child {
+      padding-left: 20px; /* 원하는 만큼 10~40px 조절 */
     }
 
     /* Keep avatar centered within left column */
@@ -254,53 +249,44 @@
 <div class="container">
 
   <!-- Header (aligned with sections) -->
-  <div class="main">
-
-    <div class="leftcol">
-      <div class="avatar-wrap">
-        <div class="avatar">
-          <img src="assets/profile.jpg" alt="Jaedong Lee">
-        </div>
+  <div class="header">
+    <div class="avatar-wrap">
+      <div class="avatar">
+        <img src="assets/profile.jpg" alt="Jaedong Lee">
       </div>
-
-      <p><strong>Location</strong><br/>Korea</p>
-      <p><strong>Keywords</strong><br/>Robotics · RL · Simulation</p>
     </div>
 
-    <div class="rightcol">
+    <div>
+      <h1>Jaedong Lee</h1>
+      <div class="meta">Holiday Robotics · jaedong.lee [at] holiday-robotics.com</div>
 
-      <!-- Intro section (NEW) -->
-      <div class="section intro">
-        <h1>Jaedong Lee</h1>
-        <div class="meta">Holiday Robotics · jaedong.lee [at] holiday-robotics.com</div>
+      <p class="bio">
+        I am a senior research engineer at Holiday Robotics working on robotics,
+        learning-based control, and robot simulation.
+        I received my Ph.D. in Computer Science &amp; Engineering from Seoul National University,
+        advised by
+        <a href="https://mrl.snu.ac.kr/~jehee/" target="_blank" rel="noopener noreferrer">Jehee Lee</a>
+        and
+        <a href="https://sites.google.com/view/jungdam/home" target="_blank" rel="noopener noreferrer">Jungdam Won</a>.
+        During my Ph.D., I studied natural human motion through character animation and biomechanics.
+        My interests include reinforcement learning, motion retargeting, and interaction-aware robot behaviors.
+      </p>
 
-        <p class="bio">
-          I am a senior research engineer at Holiday Robotics working on robotics,
-          learning-based control, and robot simulation.
-          I received my Ph.D. in Computer Science &amp; Engineering from Seoul National University,
-          advised by
-          <a href="https://mrl.snu.ac.kr/~jehee/">Jehee Lee</a>
-          and
-          <a href="https://sites.google.com/view/jungdam/home">Jungdam Won</a>.
-          During my Ph.D., I studied natural human motion through character animation and biomechanics.
-        </p>
 
-        <ul class="links">
-          <li><a href="https://scholar.google.com/citations?user=eWpQR7MAAAAJ&hl=en">Google Scholar</a></li>
-          <li><a href="https://github.com/jaedong-holiday/">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/jaedong-lee-507a48147/">LinkedIn</a></li>
-        </ul>
+      <ul class="links">
+        <li><a href="https://scholar.google.com/citations?user=eWpQR7MAAAAJ&hl=en">Google Scholar</a></li>
+        <li><a href="https://github.com/jaedong-holiday/">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/jaedong-lee-507a48147/">LinkedIn</a></li>
+      </ul>
 
-        <div class="chips">
-          <span class="chip">Robotics</span>
-          <span class="chip">Reinforcement Learning</span>
-          <span class="chip">Character Animation</span>
-          <span class="chip">Simulation</span>
-        </div>
+      <div class="chips">
+        <span class="chip">Robotics</span>
+        <span class="chip">Reinforcement Learning</span>
+        <span class="chip">Character Animation</span>
+        <span class="chip">Simulation</span>
       </div>
-
-    <!-- 기존 Work / Edu / Pub 섹션들 그대로 -->
-
+    </div>
+  </div>
 
   <!-- Main -->
   <div class="main">
