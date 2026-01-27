@@ -45,19 +45,18 @@
       align-items:start;
       padding-bottom: 32px;
       border-bottom: 1px solid var(--border);
-    }
+    }   
 
     /* Keep avatar centered within left column */
     .avatar-wrap{
       display: flex;
       justify-content: center;
-      align-items: center;
-      padding-top: 8px; /* 살짝 위로 */
+      align-items: center;      
     }
 
     .avatar{
-      width:180px;
-      height:240px;
+      width:210px;
+      height:280px;
       border-radius:20px;
       overflow:hidden;
       border:1px solid var(--border);
@@ -219,6 +218,10 @@
       font-weight:600;
     }
 
+    .pub-authors .me {
+      font-weight: 800;
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 800px){
       :root{
@@ -317,7 +320,7 @@
         <ul class="pubs">
           <li class="pub">
             <div class="pub-title">Exo-Plore: Exploring Exoskeleton Control Space through Human-aligned Simulation</div>
-            <div class="pub-authors">Geonho Leem, Jaedong Lee, Jehee Lee, Seungmoon Song, Jungdam Won</div>
+            <div class="pub-authors">Geonho Leem, <span class="me">Jaedong Lee</span>, Jehee Lee, Seungmoon Song, Jungdam Won</div>
             <div class="pub-venue"><em>Conference / Journal</em>, Year</div>
             <div class="pub-links">
               <a href="#">PDF</a><a href="#">Project</a><a href="#">Code</a>
@@ -326,7 +329,7 @@
 
           <li class="pub">
             <div class="pub-title">Generative GaitNet</div>
-            <div class="pub-authors">Jungnam Park, Sehee Min, Phil Sik Chang, Jaedong Lee, Moon Seok Park, Jehee Lee</div>
+            <div class="pub-authors">Jungnam Park, Sehee Min, Phil Sik Chang, <span class="me">Jaedong Lee</span>, Moon Seok Park, Jehee Lee</div>
             <div class="pub-venue"><em>SIGGRAPH Conference Proceedings</em>, 2022</div>
             <div class="pub-links">
               <a href="https://dl.acm.org/doi/abs/10.1145/3528233.3530717">PDF</a>
@@ -336,7 +339,7 @@
 
           <li class="pub">
             <div class="pub-title">Crowd Simulation by Deep Reinforcement Learning</div>
-            <div class="pub-authors">Jaedong Lee, Jungdam Won, and Jehee Lee.</div>
+            <div class="pub-authors"><span class="me">Jaedong Lee</span>, Jungdam Won, and Jehee Lee.</div>
             <div class="pub-venue"><em>In proceedings of Motion, Interaction and Games</em>, 2018</div>
             <div class="pub-links">
               <a href="https://dl.acm.org/doi/abs/10.1145/3274247.3274510">PDF</a>
