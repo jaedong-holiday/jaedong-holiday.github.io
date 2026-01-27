@@ -48,14 +48,15 @@
     }   
 
     .header > div:last-child {
-      padding-left: 40px; /* 원하는 만큼 10~40px 조절 */
+      padding-left: 20px; /* 원하는 만큼 10~40px 조절 */
     }
 
     /* Keep avatar centered within left column */
     .avatar-wrap{
-      display: flex;
-      justify-content: center;
-      align-items: center;      
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding-top: 40px;  /* 데스크탑에서만 살짝 내리고 싶을 때 */  
     }
 
     .avatar{
@@ -69,7 +70,7 @@
       align-items:center;
       justify-content:center;
       /* ✅ remove manual offset that breaks alignment */
-      margin-top: 80px;
+      margin-top: 0;
     }
 
     .avatar img{
@@ -228,20 +229,66 @@
 
     /* ===== Responsive ===== */
     @media (max-width: 800px){
-      :root{
-        --leftcol: 1fr;
+      /* 모바일에서는 1컬럼(세로) 레이아웃이 자연스러움 */
+      .container{
+        margin: 36px auto;
+        padding: 0 16px;
       }
+
       .header, .main{
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
+        gap: 16px;
       }
+
+      /* header의 텍스트가 괜히 오른쪽으로 밀리지 않게 */
+      .header > div:last-child{
+        padding-left: 0;
+      }
+
+      /* 아바타는 위쪽에 자연스럽게, 가운데 정렬 */
       .avatar-wrap{
-        justify-content:flex-start;
+        justify-content: center;
       }
+
       .avatar{
-        width:140px;
-        height:190px;
+        width: 160px;
+        height: 210px;
+        margin-top: 0; /* ✅ 모바일에서 80px 내려가는 문제 제거 */
+      }
+
+      /* 왼쪽 컬럼(Location/Keywords)은 우측 섹션 앞에 한 줄 요약처럼 */
+      .leftcol{
+        padding-top: 0;
+        text-align: center;
+      }
+
+      /* 링크들이 좁은 화면에서 줄바꿈이 깔끔하게 */
+      .links{
+        justify-content: center;
+        gap: 10px 14px;
+      }
+
+      /* 칩도 가운데로 */
+      .chips{
+        justify-content: center;
+      }
+
+      /* 카드 패딩 약간 줄여서 모바일에서 답답함 제거 */
+      .section{
+        padding: 20px 18px;
+        border-radius: 16px;
+        margin-bottom: 18px;
+      }
+
+      /* 글자 크기 살짝 조정 */
+      h1{
+        font-size: 2.0em;
+      }
+      .bio{
+        font-size: 1.0em;
       }
     }
+
   </style>
 </head>
 
