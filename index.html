@@ -202,18 +202,20 @@
 
     /* ===== Publication with thumbnail ===== */
     .pub{
-      display: grid;
-      grid-template-columns: 140px 1fr;
+      display: flex;      
       gap: 20px;
       align-items: flex-start;
+
       margin-bottom: 32px;
       padding-bottom: 32px;
       border-bottom: 1px dashed var(--border);
     }
     
     .pub-thumb{
-      width: 240px;
-      height: 180px;
+      flex-shrink: 0; 
+      width: 200px;
+      height: 150px;
+
       border-radius: 1px;
       overflow: hidden;
       border: 1px solid var(--border);
@@ -233,8 +235,9 @@
     }
 
     .pub-content{
+      flex: 1; 
       min-width: 0;
-      margin-left: 40px;
+      margin-left: 20px;
     }
 
     .pub:last-child{
